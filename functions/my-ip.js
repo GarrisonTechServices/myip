@@ -1,8 +1,8 @@
 exports.handler = async event => {
-    var ip = req.headers['x-forwarded-for'] || 
-    req.connection.remoteAddress || 
-    req.socket.remoteAddress ||
-    (req.connection.socket ? req.connection.socket.remoteAddress : null);
+    var ip = request.headers['x-forwarded-for'] || 
+    request.connection.remoteAddress || 
+    request.socket.remoteAddress ||
+    (request.connection.socket ? request.connection.socket.remoteAddress : null);
 
     return {
         status: 200,
