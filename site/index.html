@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Your IP</h1>
+
+<script type="text/javascript">
+    var apiUrl = 'https://agitated-dubinsky-8a0564.netlify.com/.netlify/functions/ip';
+    fetch(apiUrl).then(response => {
+      return response.json();
+    }).then(data => {
+      // Work with JSON data here
+      console.log(data);
+    }).catch(err => {
+      // Do something for an error here
+    });
+</script>
+ 
+<div id=IP></div>
+
+</body>
+</html>
